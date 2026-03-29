@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MFED Anniversary Countdown | Ministry of Finance and Economic Development</title>
+  <meta name="description" content="Official countdown to the MFED DAY on 8 April 2026. Visit the Ministry of Finance and Economic Development website for the live countdown." />
+
+  <meta property="og:title" content="MFED Anniversary Countdown" />
+  <meta property="og:description" content="Official countdown to the MFED DAY on 8 April 2026." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mfed.gov.ki/countdown/" />
+  <meta property="og:image" content="https://mfed.gov.ki/countdown/mfed-anniversary-preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MFED Anniversary Countdown" />
+  <meta name="twitter:description" content="Official countdown to the MFED DAY on 8 April 2026." />
+  <meta name="twitter:image" content="https://mfed.gov.ki/countdown/mfed-anniversary-preview.jpg" />
+
+  <link rel="icon" href="https://mfed.gov.ki/favicon.ico" />
+
+  <style>
+    :root {
+      --navy: #0a2a43;
+      --blue: #0f4c81;
+      --gold: #ffd45d;
+      --white: #ffffff;
+      --soft-white: #eef4fb;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(255, 212, 93, 0.18), transparent 30%),
+        linear-gradient(135deg, var(--navy), var(--blue));
+      color: var(--white);
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1240px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      padding: 34px 34px 28px;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(4px);
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 260px;
+      height: 260px;
+      right: -80px;
+      top: -100px;
+      background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+    }
+
+    .hero::after {
+      width: 220px;
+      height: 220px;
+      left: -90px;
+      bottom: -90px;
+      background: radial-gradient(circle, rgba(255,255,255,0.16) 0%, transparent 70%);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-img {
+      width: 96px;
+      height: 96px;
+      object-fit: contain;
+      display: block;
+      flex-shrink: 0;
+      filter: drop-shadow(0 6px 14px rgba(0,0,0,0.18));
+    }
+
+    .brand-text small {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #e4eef8;
+      margin-bottom: 6px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.2;
+      color: #ffffff;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.28);
+    }
+
+    .event-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      color: #f7f7f7;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 10px 0 4px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5.6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      text-shadow: 0 4px 14px rgba(0,0,0,0.22);
+    }
+
+    .subtitle {
+      max-width: 860px;
+      margin: 14px auto 0;
+      color: var(--soft-white);
+      font-size: clamp(17px, 2vw, 24px);
+      line-height: 1.5;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+
+    .date-line {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      font-weight: 800;
+      color: var(--gold);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin: 34px 0 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .unit {
+      border-radius: 24px;
+      padding: 26px 16px;
+      background: rgba(130, 171, 210, 0.36);
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 30px rgba(0, 0, 0, 0.16);
+    }
+
+    .value {
+      font-size: clamp(38px, 6vw, 82px);
+      font-weight: 800;
+      line-height: 1;
+      color: var(--gold);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.22);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .label {
+      margin-top: 12px;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--soft-white);
+      font-weight: 700;
+    }
+
+    .status-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+      color: #f2f7fc;
+      font-size: 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #4ade80;
+      box-shadow: 0 0 18px rgba(74, 222, 128, 0.8);
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      color: #edf3fa;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer strong {
+      color: #ffffff;
+    }
+
+    .note {
+      max-width: 560px;
+    }
+
+    @media (max-width: 900px) {
+      .topbar,
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .countdown {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 14px;
+      }
+
+      .hero {
+        padding: 22px 18px 20px;
+        border-radius: 22px;
+      }
+
+      .brand {
+        align-items: center;
+      }
+
+      .logo-img {
+        width: 74px;
+        height: 74px;
+      }
+
+      .countdown {
+        gap: 12px;
+      }
+
+      .unit {
+        padding: 18px 10px;
+        border-radius: 18px;
+      }
+
+      .footer {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .countdown {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      body.tv-mode {
+        padding: 14px;
+      }
+
+      body.tv-mode .hero {
+        min-height: calc(100vh - 28px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-label="MFED Anniversary Countdown">
+      <div class="topbar">
+        <div class="brand">
+          <img src="./final.png" class="logo-img" alt="MFED Logo" />
+          <div class="brand-text">
+            <small>Government of Kiribati</small>
+            <strong>Ministry of Finance and Economic Development</strong>
+          </div>
+        </div>
+        <div class="event-pill">Anniversary Celebration • 8 April 2026</div>
+      </div>
+
+      <div class="content">
+        <h1>Countdown to the MFED DAY</h1>
+        <p class="subtitle">
+          Join us as we celebrate another year of service, leadership, and development for Kiribati.
+        </p>
+        <div class="date-line">Wednesday, 8 April 2026 • Tarawa Time</div>
+      </div>
+
+      <section class="countdown" aria-label="Countdown timer">
+        <article class="unit">
+          <div id="days" class="value">00</div>
+          <div class="label">Days</div>
+        </article>
+        <article class="unit">
+          <div id="hours" class="value">00</div>
+          <div class="label">Hours</div>
+        </article>
+        <article class="unit">
+          <div id="minutes" class="value">00</div>
+          <div class="label">Minutes</div>
+        </article>
+        <article class="unit">
+          <div id="seconds" class="value">00</div>
+          <div class="label">Seconds</div>
+        </article>
+      </section>
+
+      <div class="status-row">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span id="status">Live countdown is running</span>
+      </div>
+
+      <div class="footer">
+        <div><strong>MFED Anniversary Countdown</strong></div>
+        <div class="note"><strong>Coded by MFED ICT Team.</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const targetDate = new Date('2026-04-08T00:00:00+12:00').getTime();
+
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+    const statusEl = document.getElementById('status');
+
+    function pad(value) {
+      return String(value).padStart(2, '0');
+    }
+
+    function updateCountdown() {
+      const now = Date.now();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        daysEl.textContent = '00';
+        hoursEl.textContent = '00';
+        minutesEl.textContent = '00';
+        secondsEl.textContent = '00';
+        statusEl.textContent = 'Happy MFED Anniversary!';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      daysEl.textContent = pad(days);
+      hoursEl.textContent = pad(hours);
+      minutesEl.textContent = pad(minutes);
+      secondsEl.textContent = pad(seconds);
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    if (window.innerWidth >= 1400 && window.innerHeight >= 800) {
+      document.body.classList.add('tv-mode');
+    }
+  </script>
+</body>
+</html>
